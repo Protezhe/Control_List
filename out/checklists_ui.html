@@ -115,7 +115,7 @@ body {
 .footer { margin-top: 8px; }
 .footer p { margin: 4px 0; }
 .defects { margin-top: 10px; }
-.defects-line { border-bottom: 1px solid var(--border); height: 16px; margin-top: 6px; }
+.defects-line { border-bottom: 1px solid var(--border); min-height: 16px; margin-top: 6px; }
 .stamp {
   display: inline-block;
   border: 2px solid var(--accent);
@@ -131,11 +131,12 @@ body {
   .check-col input[type="checkbox"]:checked + .print-check::after { content: "☑"; }
   .check-col input[type="checkbox"]:not(:checked) + .print-check::after { content: "☐"; }
   .toolbar { display: none; }
-  body { margin: 8mm; font-size: 11px; }
+  body { margin: 8mm; font-size: 11px; overflow-wrap: break-word; word-wrap: break-word; }
   .header { padding: 8px 10px; }
-  .section { padding: 8px 10px; margin: 8px 0; }
-  .checklist th { padding: 5px 6px; font-size: 10px; }
-  .checklist td { padding: 5px 6px; }
+  .section { padding: 8px 10px; margin: 8px 0; overflow-wrap: break-word; word-wrap: break-word; }
+  .checklist { table-layout: fixed; }
+  .checklist th { padding: 5px 6px; font-size: 10px; word-wrap: break-word; overflow-wrap: break-word; }
+  .checklist td { padding: 5px 6px; word-wrap: break-word; overflow-wrap: break-word; }
   .signature-line { min-width: 220px; }
 }
 </style>
